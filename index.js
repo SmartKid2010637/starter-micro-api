@@ -1,6 +1,9 @@
-var http = require('http');
+var http = require('http'); // HTTP module
+var url = require('url'); // url module
+var fs = require('fs'); // file system module
+
 http.createServer(function (req, res) {
-    console.log(`Just got a request at ${req.url}!`)
-    res.write('Written by SmartKid2010637');
-    res.end();
-}).listen(process.env.PORT || 3000);
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write("Written by SmartKid");
+    res.end()
+}).listen(8080);
