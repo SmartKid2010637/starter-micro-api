@@ -1,6 +1,7 @@
-var http = require('http');
-var url = require('url');
-var fs = require('fs');
+npm install @cyclic.sh/s3fs
+const http = require('http');
+const url = require('url');
+const fs = require('@cyclic.sh/s3fs')(cyclic-dull-cyan-dibbler-shoe-ap-southeast-2)
 
 http.createServer(function (req, res) {
 	var q = url.parse(req.url, true);
@@ -11,8 +12,8 @@ http.createServer(function (req, res) {
 	}
 	console.log(q.pathname);
   	fs.readFile(filename, function(err, data) {
-    if (err) {
-      res.writeHead(404, {'Content-Type': 'text/html'});
+	if (err) {
+    	res.writeHead(404, {'Content-Type': 'text/html'});
       return res.end("404 Not Found");
     } 
     res.writeHead(200, {'Content-Type': 'text/html'});
