@@ -1,4 +1,4 @@
-npm install @cyclic.sh/s3fs
+//npm install @cyclic.sh/s3fs
 var http = require('http');
 var url = require('url');
 var fs = requre('fs');
