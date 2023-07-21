@@ -1,7 +1,7 @@
 //npm install @cyclic.sh/s3fs
 var http = require('http');
 var url = require('url');
-var fs = requre('fs');
+var fs = require('fs');
 const fs2 = require('@cyclic.sh/s3fs')(cyclic-dull-cyan-dibbler-shoe-ap-southeast-2);
 
 http.createServer(function (req, res) {
